@@ -3,13 +3,11 @@ import { RouterModule } from "@angular/router";
 import { AdminGuard } from "../guard/admin.guard";
 import { CustomerGuard } from "../guard/customer.guard";
 import { SharedToNotShareModule } from '../shared/tonotshare.module';
-import { AdminComponent } from "./admin/admin.component";
-import { CustomerComponent } from "./customer/customer.component";
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRouting } from "./dashboard.routing";
 
 @NgModule({
-  declarations: [DashboardComponent, AdminComponent, CustomerComponent],
+  declarations: [DashboardComponent],
   imports: [RouterModule, DashboardRouting, SharedToNotShareModule],
   providers: [AdminGuard, CustomerGuard]
 })

@@ -5,6 +5,7 @@ import { SharedToNotShareModule } from 'src/app/shared/tonotshare.module';
 import { SharedLayoutModule } from '../../shared/shared.layout.module';
 import { SharedModule } from '../../shared/shared.module';
 import { SharedUserModule } from '../../shared/shared.user.module';
+import { AdminComponent } from './admin.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { SharedUserModule } from '../../shared/shared.user.module';
     SharedNewModule,
     SharedToNotShareModule
   ],
-  declarations: []
+  declarations: [AdminComponent]
 })
 export class AdminModule { }
