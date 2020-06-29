@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from "@angular/router";
-import { DashboardComponent } from "./dashboard.component";
 import { AdminGuard } from "../guard/admin.guard";
-import { CustomerGuard } from "../guard/customer.guard";
+import { CustomerGuard } from '../guard/customer.guard';
+import { DashboardComponent } from "./dashboard.component";
 
 export const DASH_ROUTES: Routes = [
   {
