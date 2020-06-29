@@ -10,7 +10,7 @@ export const APP_ROUTES: Routes = [
     canLoad: [AuthGuard]
   },
   {
-    path: "login",
+    path: "auth",
     loadChildren: () => import("./auth/auth.module").then(m => m.AuthModule),
   },
 
