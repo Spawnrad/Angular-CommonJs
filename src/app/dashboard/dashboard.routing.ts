@@ -15,7 +15,7 @@ export const DASH_ROUTES: Routes = [
         canLoad: [AdminGuard]
       },
       {
-        path: "admin",
+        path: "customer",
         loadChildren: () =>
           import("./customer/customer.module").then(m => m.CustomerModule),
         canLoad: [CustomerGuard]
