@@ -1,17 +1,15 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { SharedModule } from "../shared/shared.module";
-import { DashboardRouting } from "./dashboard.routing";
+import { RouterModule } from "@angular/router";
+import { AdminGuard } from "../guard/admin.guard";
+import { CustomerGuard } from "../guard/customer.guard";
+import { SharedToNotShareModule } from '../shared/tonotshare.module';
 import { AdminComponent } from "./admin/admin.component";
 import { CustomerComponent } from "./customer/customer.component";
-import { CustomerGuard } from "../guard/customer.guard";
-import { AdminGuard } from "../guard/admin.guard";
-import { RouterModule } from "@angular/router";
-import { BrowserModule } from "@angular/platform-browser";
+import { DashboardRouting } from "./dashboard.routing";
 
 @NgModule({
   declarations: [AdminComponent, CustomerComponent],
-  imports: [RouterModule, DashboardRouting],
+  imports: [RouterModule, DashboardRouting, SharedToNotShareModule],
   providers: [AdminGuard, CustomerGuard]
 })
-export class DashboardModule {}
+export class DashboardModule { }
