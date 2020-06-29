@@ -1,17 +1,17 @@
 import { RouterModule, Routes } from "@angular/router";
-import { HelloComponent } from "./hello.component";
 import { AuthGuard } from "./guard/auth.guard";
+import { HelloComponent } from "./hello.component";
 
 export const APP_ROUTES: Routes = [
-    { path: "", component: HelloComponent },
+  { path: "", component: HelloComponent },
   {
     path: "dashboard",
     loadChildren: () => import("./dashboard/dashboard.module").then(m => m.DashboardModule),
     canLoad: [AuthGuard]
   },
   {
-    path: "",
-    loadChildren: () => import("./auth/auth.module").then(m => m.AuthModule)
+    path: "login",
+    loadChildren: () => import("./auth/auth.module").then(m => m.AuthModule),
   },
 
 ];
